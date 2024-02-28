@@ -1,3 +1,7 @@
+rule all:
+   input:
+      "sulfo.cmp.matrix.png"
+
 rule rule_1:
   input: "a.fa.gz"
   output: "a.sig.zip"
@@ -8,7 +12,6 @@ rule rule_2:
   output: "b.sig.zip"
   shell: "sourmash sketch dna b.fa.gz --name 'Sulfitobacter sp. EE-36' -o b.sig.zip"
 
-  
 rule rule_3:
   input: "c.fa.gz"
   output: "c.sig.zip"
